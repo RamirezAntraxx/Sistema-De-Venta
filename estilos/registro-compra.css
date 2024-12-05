@@ -1,0 +1,96 @@
+/* Estilos para la sección de compras */
+#compras {
+    background-color:#182231; /* Fondo gris oscuro */
+    color: #bebebe; /* Texto claro */
+    padding: 20px; /* Espaciado interno */
+    
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 20 114px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s; /* Transición suave */
+   
+    background-position: 0% 100%; /* Posición del gradient */
+}
+
+#compras ul {
+    list-style-type: none; /* Quitar los puntos de la lista */
+    padding: 0; /* Quitar el espaciado interno de la lista */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    color: #000000; /* Color del texto */
+    
+
+}
+
+#compras li {
+    margin-bottom: 20px; /* Espaciado entre cada compra */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    color: #666; /* Color del texto */
+}
+
+#compras li span {
+    display: block; /* Mostrar cada elemento de la compra en una línea */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    color: #666; /* Color del texto */
+}
+
+/* Estilos para la sección de total pagado */
+#total-pagado {
+    background-color: #182231; /* Fondo gris oscuro */
+    color: #bebebe; /* Texto claro */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s; /* Transición suave */
+    text-align: right; /* Alinear el texto a la derecha */
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+    font-family: Arial, sans-serif; /* Tipo de letra */
+    background-position: 0% 100%; /* Posición del gradient */
+    margin-top: 20px;
+}
+
+#total-pagado:hover {
+    box-shadow: 0 4px 8px  rgba(131, 131, 131, 0.2); /* Sombra más grande al pasar el mouse */
+    transform: translateY(-2px); /* Mover el elemento hacia arriba ligeramente al pasar el mouse */
+}
+
+#compras:hover {
+    box-shadow: 0 4px 8px rgba(131, 131, 131, 0.2); /* Sombra más grande al pasar el mouse */
+    transform: translateY(-2px); /* Mover el elemento hacia arriba ligeramente al pasar el mouse */
+}
+
+h2 {
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    color: rgb(221, 221, 221); /* Color del texto */
+    margin-top: 40px;
+   
+}
+
+p {
+    font-size: 1.2rem; /* Tamaño de fuente más grande */
+    color: rgb(151, 151, 151); /* Color del texto */
+    margin-top: 10px;
+}
+
+.registro-compra {
+    display: flex; /* Establecer el contenedor como flexible */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    justify-content: space-between; /* Espaciado entre los elementos */
+    align-items: center; /* Alinear los elementos verticalmente */
+}
+
+.img-registro {
+    width: 10px; /* Ancho de la imagen */
+    height: 220px; /* Alto de la imagen */
+    border-radius: 100px; /* Redondear las esquinas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin: 50px; /* Espaciado entre la imagen y el texto */
+    flex-grow: 1; /* Ajustar el tamaño de la imagen al tamaño del contenedor */
+}
+
+.datos-registro {
+    flex-grow: 2; /* Ajustar el tamaño de los datos al tamaño del contenedor */
+}

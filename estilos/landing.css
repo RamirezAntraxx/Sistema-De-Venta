@@ -1,0 +1,284 @@
+
+
+/*--------------------
+Landing
+--------------------*/
+.landing {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  height: 520px;
+  margin: 40px auto;
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border-radius: 10px 5px 20px 0;
+  transition: transform 0.5s ease;
+  
+}
+
+.landing:hover { 
+  transform: scale(1.02);
+}
+
+.landing .base {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 150%;
+  height: 150%;
+  padding: 38px;
+  color: #4378d3;
+  transition: transform 0.3s ease;
+  
+}
+
+.landing .base:hover { 
+  transform: scale(1.01);
+}
+
+.image {
+
+  border: 2px solid rgb(255, 255, 255); /* Agregué un borde blanco a la imagen */
+  border-radius: 5px;
+}
+
+/*--------------------
+Copy
+--------------------*/
+.copy {
+  position: relative;
+  z-index: 2;
+}
+.copy .title {
+  font-size: 52px;
+  font-weight: 800;
+  
+  line-height: 1;
+  margin-bottom: 30px;
+  margin-left: -3px;
+  font-family: sans-serif;
+  
+  
+}
+.copy .title small {
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 50px;
+  line-height: 1;
+  display: block;
+  text-indent: 3px;
+  font-family: sans-serif;
+}
+.copy .text {
+  color: #04cdff;
+  font-family: sans-serif;
+  width: 500px;
+  font-size: 95%; 
+}
+.copy .cta {
+  
+  cursor: pointer;
+  margin-top: 40px;
+  background-color: #3a5fdb; 
+  color: #fff;
+  
+  display: inline-block;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 10px 30px;
+  font-weight: 600;
+
+  /* Transición y el zoom */
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+.copy .cta:hover {
+  transform: scale(1.1); 
+  background-color: #4ea9ff; 
+}
+
+
+/*--------------------
+Overlay
+--------------------*/
+.base.overlay {
+  z-index: 2;
+  -webkit-clip-path: polygon(375px 0, 710px 0, 710px 530px, 469px 530px);
+          clip-path: polygon(375px 0, 710px 0, 710px 530px, 469px 530px);
+  color: #fff;
+  background: linear-gradient(45deg, #082352, #413d50);
+  transition: all 0.6s ease-in-out;
+  transform-origin: 0 0;
+  
+}
+.base.overlay.over {
+  -webkit-clip-path: polygon(-1750px 0, 710px 0, 710px 630px, 0 710px);
+          clip-path: polygon(-1750px 0, 710px 0, 710px 630px, 0 710px);
+}
+.base.overlay .logo svg {
+  fill: #fff;
+}
+.base.overlay  {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  
+}
+.base.overlay ::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: linear-gradient(42deg, #082352, #000000);
+  opacity: 0.8;
+  
+}
+.base.overlay .title {
+  background-image: linear-gradient(0, #fff, #fff);
+  
+}
+.base.overlay .text {
+  color: #fff;
+}
+.base.overlay .cta {
+  background: #fff;
+  color: #0A2452;
+  
+}
+
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .landing {
+    width: 90%;
+    height: auto;
+  }
+
+  .landing .base {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .copy .title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .copy .title small {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+
+  .copy .text {
+    width: 100%;
+    font-size: 90%;
+  }
+
+  .copy .cta {
+    margin-top: 30px;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing {
+    width: 95%;
+  }
+
+  .copy .title {
+    font-size: 28px;
+  }
+
+  .copy .title small {
+    font-size: 14px;
+  }
+
+  .copy .text {
+    font-size: 85%;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  gap: 20px;
+  align-items: center;
+}
+
+.image {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.copy {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .image {
+    order: 2;
+    justify-content: center; /* Centramos la imagen en pantallas pequeñas */
+  }
+
+  .copy {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .image {
+    order: 2;
+    justify-content: center; /* Centramos la imagen en pantallas pequeñas */
+  }
+
+  .copy {
+    text-align: center;
+  }
+}
+
+@media (max-width: 320px) {
+  .landing {
+    width: 100%;
+  }
+
+  .copy .title {
+    font-size: 24px;
+  }
+
+  .copy .title small {
+    font-size: 12px;
+  }
+
+  .copy .text {
+    font-size: 80%;
+  }
+
+  .copy .cta {
+    margin-top: 20px;
+    padding: 6px 15px;
+  }
+}
+

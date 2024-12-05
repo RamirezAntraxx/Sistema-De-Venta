@@ -1,0 +1,55 @@
+/* Establecer estilos para el botón deslizante */
+.boton-deslizante {
+    position: relative;
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Establecer estilos para el texto del botón */
+  .boton-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Establecer estilos para el icono del botón */
+  .boton-icono {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Establecer estilos para el precio */
+  .precio {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Establecer estilos para el formulario de entrada de precio */
+  form {
+    display: none;
+  }
+  
+  /* Establecer estilos para el botón de cambio de precio */
+  #precio-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

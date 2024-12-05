@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/registro.css"> 
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.min.css">
+  
+   
+ 
+    
+</head>
+<body>
+    <div class="container">
+        <div class="form-content">
+            <h1 id="title">Registro</h1>
+            <form id="registroForm">
+                <div class="input-group" id="miform">
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="name" id="n1" placeholder="Nombre">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="lastname" id="n2" placeholder="Apellido">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" id="n3" placeholder="Correo Electrónico">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="password" id="n4" placeholder="Contraseña">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" name="phone" id="n5" placeholder="Número de Teléfono">
+                    </div>
+                    <div class="input-field">
+         
+                        <i class="fa-solid fa-id-card"></i>
+                        <input type="text" name="identification" id="n6" placeholder="Número de Identificación">
+                    </div>
+                    <p>¿Ya tienes cuenta? <a href="#">Iniciar Sesión</a></p>
+                    <div class="btn-field">
+                        <button id="signIn" type="submit">Registrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="alert alert-success alert-dismissible fade position-fixed bottom-0 end-0 m-3" id="successAlert" role="alert">
+        Se registró el nuevo usuario satisfactoriamente.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      
+      <div class="alert alert-danger alert-dismissible fade position-fixed bottom-0 end-0 m-3" id="errorAlert" role="alert">
+        El usuario ya existe, no se puede volver a registrar.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+
+    <script src="JavaScript/formulario.js"></script>
+</body>
+</html>

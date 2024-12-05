@@ -1,0 +1,561 @@
+/* Estilos del encabezado */
+.header {
+    background-color: #182231;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    z-index: 100;
+    padding: 10px 10%;
+    list-style: none;
+}
+
+.nav-links li a {
+    font-size: 20px;
+}
+
+/* Estilos del logo dentro del encabezado */
+.header .logo {
+    cursor: pointer;
+    /* Cambia el cursor a tipo puntero */
+    margin-right: auto;
+    /* Empuja el logo a la izquierda */
+}
+
+/* Estilos de la imagen del logo */
+.header .logo img {
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+    border-radius: 60px;
+}
+
+/* Efecto hover para el logo */
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+/* Estilos de los elementos de la lista */
+.header .nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+    list-style: none;
+    transition: all 0.3s ease 0s;
+}
+
+/* Efecto hover para los elementos de la lista y enlaces del menú móvil */
+.header .nav-links li:hover,
+.header .overlay a:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    /* Aumenta el tamaño al pasar el mouse */
+}
+
+/* Estilos de los enlaces de navegación */
+.header .nav-links a {
+    font-weight: 700;
+    color: #ffffff;
+    transition: all 0.3s ease 0s;
+    list-style: none;
+}
+
+/* Efecto hover para los enlaces de navegación */
+.header .nav-links a:hover {
+    color: #cef51f;
+    list-style: none;
+
+}
+
+/* Estilos del botón de menú y botón de contacto */
+.header .btn button,
+.header .menu button {
+    margin-left: 20px;
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+}
+
+/* Efecto hover para los botones */
+.header .btn button:hover,
+.header .menu button:hover {
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}
+
+/* Estilos para dispositivos con pantalla de ancho máximo de 800px */
+@media screen and (max-width: 800px) {
+
+
+    .btn {
+        display: none;
+        /* Oculta los enlaces de navegación y el botón de contacto */
+    }
+
+    .menu {
+        display: inherit;
+        /* Muestra el botón de menú */
+    }
+
+    .nav-links li {
+        display: none;
+    }
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .nav-links li {
+        display: none;
+        /* Oculta la lista de enlaces en pantallas pequeñas */
+    }
+
+    .btn {
+        display: none;
+        /* Oculta el botón en pantallas pequeñas */
+    }
+}
+
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 767px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links li:first-child {
+        display: none;
+        /* Oculta el enlace "Inicio" en pantallas pequeñas */
+    }
+
+    .btn {
+        display: none;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .nav-links li:nth-child(2),
+    /* Oculta el enlace "Inicio" */
+    .nav-links li:nth-child(3) {
+        /* Oculta el enlace "Acerca De" */
+        display: none;
+    }
+}
+
+/* Estilos para el menú móvil */
+.header .overlay {
+    height: 100%;
+    /* Altura total de la pantalla */
+    width: 0;
+    /* Ancho inicial del menú móvil */
+    position: fixed;
+    /* Posición fija en la pantalla */
+
+    left: 0;
+    /* Alinea el menú a la izquierda */
+    top: 0;
+    /* Alinea el menú a la parte superior */
+    background-color: rgba(33, 49, 63, .95);
+    /* Color de fondo con transparencia */
+    overflow: hidden;
+    /* Oculta el contenido que se desborde */
+    transition: all 0.3s ease 0s;
+    /* Transición suave para la apertura/cierre */
+    z-index: 100;
+}
+
+/* Estilos del contenido del menú móvil */
+.header .overlay .overlay-content {
+    display: flex;
+    /* Utiliza Flexbox para el diseño */
+    height: 100%;
+    /* Altura total de la pantalla */
+    flex-direction: column;
+    /* Organiza los elementos en columna */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    justify-content: center;
+    /* Centra los elementos verticalmente */
+}
+
+/* Estilos de los enlaces dentro del menú móvil */
+.header .overlay a {
+    padding: 15px;
+    /* Espaciado alrededor de los enlaces */
+    font-size: 36px;
+    /* Tamaño de fuente para los enlaces */
+    display: block;
+    /* Muestra los enlaces como bloques */
+    transition: all 0.3s ease 0s;
+    /* Transición suave para efectos hover */
+    font-weight: 700;
+    /* Peso de la fuente para los enlaces */
+    color: #eceff1;
+    /* Color de los enlaces */
+}
+
+/* Efecto hover y focus para los enlaces dentro del menú móvil */
+.header .overlay a:hover,
+.header .overlay a:focus {
+    color: #ffbc0e;
+    /* Cambia el color al pasar el mouse o al enfocar */
+}
+
+.header .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+
+}
+
+@media screen and (max-height:450px) {
+    .header .overlay a {
+        font-size: 20px;
+    }
+
+    .header .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilos para la lista de enlaces de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos para los elementos de la lista */
+.nav-links li {
+    padding: 10px;
+}
+
+/* Estilos para los enlaces dentro de la lista */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+/* CSS para ocultar el botón de menú en pantallas grandes */
+.menu {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: block;
+    }
+}
+
+/* Estilos del botón de menú y botón de contacto */
+.header .btn button,
+.header .menu button,
+.header .btn-primary {
+    margin-left: 20px;
+    font-weight: 700;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn-primary {
+    color: #000000;
+    background-color: #04bd7d;
+    border-color: #04bd7d;
+}
+
+/* Efecto hover para los botones */
+.header .btn-primary:hover {
+    background-color: #12d490;
+    color: #ffffff;
+    transform: scale(1.1);
+    transition: all 0.3s ease 0s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* SECCION CONTACTO */
+.contacto {
+    background-image: url(img/contact_bg.png);
+    background-color: #1e232c;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.contacto .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contacto h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contacto .fila {
+    display: flex;
+}
+
+.contacto .col {
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+
+.contacto .col input,
+.contacto .col textarea {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border-color: #04bd7d;
+    margin-bottom: 20px;
+    background-color: #252A2E;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.contacto button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.contacto button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1cb67b;
+    z-index: -1;
+    transition: 1s;
+}
+
+.contacto button:hover .overlay {
+    width: 100%;
+}
+
+.contacto .col img {
+    width: 100%;
+}
+
+.contacto .col .info {
+    position: absolute;
+    top: 40%;
+    background-color: #252A2E;
+    padding: 15px;
+    border-radius: 25px;
+    max-swidth: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.contacto .col .info ul {
+    list-style: none;
+}
+
+.contacto .col .info ul li {
+    margin-bottom: 20px;
+}
+
+.contacto .col .info ul li i {
+    color: #1CB698;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+@media screen and (max-width:700px) {
+    .contacto .fila {
+        display: block;
+    }
+
+    .contacto .fila .col {
+        width: 100%;
+    }
+
+    .contacto .col .info {
+        bottom: auto;
+    }
+
+}
+
+.contacto h2 {
+    transition: transform 0.3s ease;
+}
+
+.contacto h2:hover {
+    transform: translateY(-5px);
+}
+
+.contacto .col input {
+    transition: transform 0.3s ease;
+}
+
+.contacto .col input:hover {
+    transform: scale(1.05); 
+}
+
+.contacto .col textarea {
+    transition: transform 0.3s ease;
+}
+
+.contacto .col textarea:hover {
+    transform: scale(1.05); 
+}
+
+#contacto {
+    border: 5px solid #131b27;
+}
+
+#contacto .col .info {
+    border: 2px solid #04bd7d;
+}
+
+footer {
+    background-color: #111;
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+}
+
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: white;
+    transform: scale(1.5);
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .socialIcons a {
+        padding: 8px;
+        margin: 4px;
+    }
+}

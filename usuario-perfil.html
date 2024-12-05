@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="react-toastify-10.0.5/package/dist/ReactToastify.min.css">
+    <link rel="stylesheet" href="estilos/usuario-menu-estilos.css">
+    <link rel="stylesheet" href="css/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css" </head>
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.min.css">
+
+<body>
+    </head>
+
+    <header class="header">
+
+        <!-- Sección del logo -->
+
+        <div class="logo">
+
+            <img src="imag/Logo.jpg" alt="Logo de la marca"> <!-- Añade el logo de la bodega aquí -->
+
+        </div>
+
+        <nav>
+            <!-- Lista de enlaces de navegación -->
+
+           
+        <ul class="nav-links">
+            <li><a href="indexuser.html" id="iniciouser-link"><i class="bi bi-paperclip"></i> Inicio</a></li>
+            <li><a href="categoria-viveres.html" id="productos-link"><i class="bi bi-cart-fill"></i> Productos</a></li>
+        </ul>
+
+            <div class="nav-right">
+            
+        </nav>
+    <!-- Botón del menú para dispositivos móviles -->
+
+    <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+
+    <!-- Menú móvil -->
+
+    <div id="mobile-menu" class="overlay">
+        <!-- Botón para cerrar el menú móvil -->
+        <a onclick="closeNav()" href="" class="close">×</a>
+        <div class="overlay-content">
+
+            <a href="#">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="#">Desarrolladores</a>
+            <a href="contactos.html">Contacto</a>
+            <a class="btn btn-primary" href="Formulario.html">
+                <i class="bi bi-people-fill" aria-hidden="true"></i> Iniciar Sesión
+            </a>
+
+
+            
+        </div>
+    </div>
+
+
+    </header>
+    <div class="wrapper">
+        <header class="header-mobile">
+            <h1 class="logo">Bodega</h1>
+            <button class="open-menu" id="open-menu">
+                <i class="bi bi-list"></i>
+            </button>
+        </header>
+        <aside>
+            <button class="close-menu" id="close-menu">
+                <i class="bi bi-x"></i>
+            </button>
+            <header>
+                <h1 class="logo">
+                    <i class="fa-solid fa-user"></i>
+                   
+                    
+                    <span id="userName"></span>
+                </h1>
+            </header>
+            
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="registro-de-compra.html" id="comida" class="boton-menu boton-categoria active">
+                            <i class="bi bi-bag"></i> datos de Usuario
+                        </a>
+                    </li>
+                    <li>
+                        <a href="registro-de-compra.html" id="mario" class="boton-menu boton-categoria ">
+                            <i class="fa-solid fa-user"></i>    Registro de Compras
+                        </a>
+                    </li>
+                    <li>
+                        
+                        <li>
+                            <a href="index.html" class="boton-menu boton-categoria">
+                              <i class="bi bi-hand-index-thumb"></i> Cerrar Sesión
+                            </a>
+                          </li>
+                 
+                </ul>
+            </nav>
+
+                <div class="footerContainer">
+      
+
+        </aside>
+        <main>
+            <section class="usuario-info">
+       
+                <div class="info-item">
+                    <i class="fa-solid fa-user"></i>   <span class="info-titulo">Nombre:</span> <span id="nombreInfo"></span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-user"></i>  <span class="info-titulo">Apellido:</span> <span id="apellidoInfo"></span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>  <span class="info-titulo">Correo Electrónico:</span> <span id="emailInfo"></span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-id-card"></i>      <span class="info-titulo">Celula:</span> <span id="celulaInfo"></span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>   <span class="info-titulo">Numero de Teléfono:</span> <span id="telefonoInfo"></span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-lock"></i>
+                    <span class="info-titulo">Contraseña:</span> <span id="contrasenaInfo"></span>
+                </div>
+                
+
+            </section>
+            <script src="JavaScript/js.js"></script>
+<script src="JavaScript/datos-de-usuario.js"></script>
+
+
+</body>
+
+</html>

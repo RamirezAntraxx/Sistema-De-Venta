@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/administrador.css">
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.min.css">
+    <link rel="stylesheet" href="estilos/bienvenido-al-sistema.css">
+    <title>Admin</title>
+</head>
+<body> 
+  <div class="container">
+    <div class="form-content">
+      <h1 id="title">Iniciar Como Administrador</h1>
+      <form id="inicioForm">
+        <div class="input-group" id="">
+          <div class="input-field">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" name="name" id="name" placeholder="Nombre">
+          </div>
+          
+         
+        
+          <div class="input-field">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="password" id="password" placeholder="Contraseña">
+          </div>
+          <p>Iniciar sesion como usuario <a href="Formulario.html">iniciar sesion</a></p>
+         
+          <div class="btn-field">
+            <button id="signIn" type="submit">Login</button>
+          </div>
+
+          <!-- Alert de bienvenida al sistema -->
+          <div class="alert alert-success alert-dismissible fade position-fixed bottom-0 end-0 m-3" id="welcomeAlert" role="alert">
+            <strong>¡Bienvenido al sistema!</strong> Disfruta de nuestros productos.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          <!-- Alert de datos invalidos -->
+          <div class="alert alert-danger alert-dismissible fade position-fixed bottom-0 end-0 m-3" id="errorAlert" role="alert">
+            <strong>¡Datos invalidos!</strong> Por favor, inténtalo de nuevo.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="JavaScript/administracion.js"></script>
+</body>
+</html>

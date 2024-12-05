@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="react-toastify-10.0.5/package/dist/ReactToastify.min.css">
+    <link rel="stylesheet" href="estilos/usuario-menu-estilos.css">
+    <link rel="stylesheet" href="css/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css" </head>
+    <link rel="stylesheet" href="fontawesome-free-6.5.2-web/css/all.min.css">
+    <link rel="stylesheet" href="estilos/registro-compra.css">
+
+<body>
+    </head>
+
+    <header class="header">
+
+        <!-- Sección del logo -->
+
+        <div class="logo">
+
+            <img src="imag/Logo.jpg" alt="Logo de la marca"> <!-- Añade el logo de la bodega aquí -->
+
+        </div>
+
+        <nav>
+            <!-- Lista de enlaces de navegación -->
+
+            <ul class="nav-links">
+                <li><a href="indexuser.html" id="iniciouser-link"><i class="bi bi-paperclip"></i> Inicio</a></li>
+                <li><a href="categoria-viveres.html" id="productos-link"><i class="bi bi-cart-fill"></i> Productos</a></li>
+            </ul>  
+          
+            <div class="nav-right">
+            
+        </nav>
+    <!-- Botón del menú para dispositivos móviles -->
+
+    <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+
+    <!-- Menú móvil -->
+
+    <div id="mobile-menu" class="overlay">
+        <!-- Botón para cerrar el menú móvil -->
+        <a onclick="closeNav()" href="" class="close">×</a>
+        <div class="overlay-content">
+
+            <a href="#">Inicio</a>
+            <a href="categoria-viveres">Productos</a>
+            <a href="#">Desarrolladores</a>
+            <a href="contactos.html">Contacto</a>
+            <a class="btn btn-primary" href="Formulario.html">
+                <i class="bi bi-people-fill" aria-hidden="true"></i> Iniciar Sesión
+            </a>
+
+
+            
+        </div>
+    </div>
+
+
+    </header>
+    <div class="wrapper">
+        <header class="header-mobile">
+            <h1 class="logo">Bodega</h1>
+            <button class="open-menu" id="open-menu">
+                <i class="bi bi-list"></i>
+            </button>
+        </header>
+        <aside>
+            <button class="close-menu" id="close-menu">
+                <i class="bi bi-x"></i>
+            </button>
+            <header>
+                <h1 class="logo">
+                    <i class="fa-solid fa-user"></i>
+                   
+                    
+                    <span id="userName"></span>
+                </h1>
+            </header>
+            
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="usuario-perfil.html" id="comida" class="boton-menu boton-categoria ">
+                            <i class="bi bi-bag"></i> Datos del Usuario
+                        </a>
+                    </li>
+                    <li>
+                        <a href="registro-de-compra.html" id="comida" class="boton-menu boton-categoria active">
+                            <i class="bi bi-bag"></i> Registro de Compras
+                        </a>
+                    </li> 
+                    <li>
+                        
+                        <li>
+                            <a href="index.html" class="boton-menu boton-categoria">
+                              <i class="bi bi-hand-index-thumb"></i> Cerrar Sesión
+                            </a>
+                          </li>
+                 
+                </ul>
+            </nav>
+
+                <div class="footerContainer">
+      
+
+        </aside>
+        <main>
+
+
+<!-- Sección para mostrar compras -->
+<div id="compras"></div>
+
+<!-- Sección para mostrar total pagado -->
+<p id="total-pagado"></p>
+
+       
+            <script src="JavaScript/js.js"></script>
+<script src="JavaScript/datos-de-usuario.js"></script>
+<script src="JavaScript/registro-de-compras.js"></script>
+
+
+</body>
+
+</html>

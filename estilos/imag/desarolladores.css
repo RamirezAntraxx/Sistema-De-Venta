@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    /* me permite deslizar cuando hago clic en los links del menu */
+    scroll-behavior: smooth;
+}
+/* Estilos del encabezado */
+.header {
+    background-color: #182231;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    z-index: 100;
+    padding: 10px 10%;
+    list-style: none;
+  }
+  
+  .nav-links li a {
+    font-size: 20px;
+  }
+  
+  /* Estilos del logo dentro del encabezado */
+  .header .logo {
+    cursor: pointer;
+    /* Cambia el cursor a tipo puntero */
+    margin-right: auto;
+    /* Empuja el logo a la izquierda */
+  }
+  
+  /* Estilos de la imagen del logo */
+  .header .logo img {
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;
+    border-radius: 60px;
+  }
+  
+  /* Efecto hover para el logo */
+  .header .logo img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Estilos de los elementos de la lista */
+  .header .nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+    list-style: none;
+    transition: all 0.3s ease 0s;
+  }
+  
+  /* Efecto hover para los elementos de la lista y enlaces del menú móvil */
+  .header .nav-links li:hover,
+  .header .overlay a:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    /* Aumenta el tamaño al pasar el mouse */
+  }
+  
+  /* Estilos de los enlaces de navegación */
+  .header .nav-links a {
+    font-weight: 700;
+    color: #ffffff;
+    transition: all 0.3s ease 0s;
+    list-style: none; 
+  }
+  
+  /* Efecto hover para los enlaces de navegación */
+  .header .nav-links a:hover {
+    color: #cef51f;
+    list-style: none;
+    
+  }
+  
+  /* Estilos del botón de menú y botón de contacto */
+  .header .btn button,
+  .header .menu button {
+    margin-left: 20px;
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  
+  }
+  
+  /* Efecto hover para los botones */
+  .header .btn button:hover,
+  .header .menu button:hover {
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+    transform: scale(1.1);
+  }
+  
+  /* Estilos para dispositivos con pantalla de ancho máximo de 800px */
+  @media screen and (max-width: 800px) {
+  
+  
+    .btn {
+      display: none;
+      /* Oculta los enlaces de navegación y el botón de contacto */
+    }
+  
+    .menu {
+      display: inherit;
+      /* Muestra el botón de menú */
+    }
+  
+    .nav-links li{
+      display: none;
+    }
+  }
+  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .nav-links li {
+      display: none; /* Oculta la lista de enlaces en pantallas pequeñas */
+    }
+  
+    .btn {
+      display: none; /* Oculta el botón en pantallas pequeñas */
+    }
+  }
+  
+  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 767px) {
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .nav-links li:first-child {
+      display: none; /* Oculta el enlace "Inicio" en pantallas pequeñas */
+    }
+  
+    .btn {
+      display: none;
+    }
+  
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links li:nth-child(2), /* Oculta el enlace "Inicio" */
+    .nav-links li:nth-child(3) { /* Oculta el enlace "Acerca De" */
+      display: none;
+    }
+  }
+  
+  /* Estilos para el menú móvil */
+  .header .overlay {
+    height: 100%;
+    /* Altura total de la pantalla */
+    width: 0;
+    /* Ancho inicial del menú móvil */
+    position: fixed;
+    /* Posición fija en la pantalla */
+  
+    left: 0;
+    /* Alinea el menú a la izquierda */
+    top: 0;
+    /* Alinea el menú a la parte superior */
+    background-color: rgba(33, 49, 63, .95);
+    /* Color de fondo con transparencia */
+    overflow: hidden;
+    /* Oculta el contenido que se desborde */
+    transition: all 0.3s ease 0s;
+    /* Transición suave para la apertura/cierre */
+    z-index: 100;
+  }
+  
+  /* Estilos del contenido del menú móvil */
+  .header .overlay .overlay-content {
+    display: flex;
+    /* Utiliza Flexbox para el diseño */
+    height: 100%;
+    /* Altura total de la pantalla */
+    flex-direction: column;
+    /* Organiza los elementos en columna */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    justify-content: center;
+    /* Centra los elementos verticalmente */
+  }
+  
+  /* Estilos de los enlaces dentro del menú móvil */
+  .header .overlay a {
+    padding: 15px;
+    /* Espaciado alrededor de los enlaces */
+    font-size: 36px;
+    /* Tamaño de fuente para los enlaces */
+    display: block;
+    /* Muestra los enlaces como bloques */
+    transition: all 0.3s ease 0s;
+    /* Transición suave para efectos hover */
+    font-weight: 700;
+    /* Peso de la fuente para los enlaces */
+    color: #eceff1;
+    /* Color de los enlaces */
+  }
+  
+  /* Efecto hover y focus para los enlaces dentro del menú móvil */
+  .header .overlay a:hover,
+  .header .overlay a:focus {
+    color: #ffbc0e;
+    /* Cambia el color al pasar el mouse o al enfocar */
+  }
+  
+  /* Estilos del botón de cierre del menú móvil */
+  .header .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+  
+  }
+  
+  /* Estilos para dispositivos con altura máxima de pantalla de 450px */
+  @media screen and (max-height:450px) {
+    .header .overlay a {
+      font-size: 20px;
+      /* Reduce el tamaño de fuente para los enlaces */
+    }
+  
+    .header .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+  /* Estilos del botón de menú y botón de contacto */
+.header .btn button,
+.header .menu button,
+.header .btn-primary {
+  margin-left: 20px;
+  font-weight: 700;
+  padding: 9px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.header .btn-primary {
+  color: #000000;
+  background-color:#04bd7d;
+  border-color: #04bd7d;
+}
+/* Efecto hover para los botones */
+.header .btn-primary:hover {
+  background-color: #12d490;
+  color: #ffffff;
+  transform: scale(1.1);
+  transition: all 0.3s ease 0s;
+}
+
+/* SECCION I N I C I O */
+.inicio{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(imag/pc-jhoan.jpg); /* Aca coloquen donde trabajaron la pagina */
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.inicio .contenido-banner{
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+.inicio .contenido-banner img{
+    margin-top: 40px;
+    border: 10px solid #1CB698;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+.inicio .contenido-banner h1{
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous';
+}
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+.inicio .contenido-banner .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+.inicio .contenido-banner .redes a:hover{
+    background-color: #1CB698;
+}
+.sobremi{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.sobremi .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.sobremi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.sobremi .contenido-seccion p span{
+    color: #1CB698;
+    font-weight: bold;
+}
+.sobremi .fila{
+    display: flex;
+}
+.sobremi .fila .col
+{
+    width: 50%;
+}
+.sobremi .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.sobremi .fila .col ul{
+    list-style: none;
+}
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    color: #1CB698;
+    width: 130px;
+}
+.sobremi .fila .col ul li span{
+    background-color: #1CB698;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.sobremi .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobremi .fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}.sobremi .fila .col .contenedor-intereses .interes:hover{
+    background-color: #1CB698;
+}
+.sobremi .fila .col .contenedor-intereses .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sobremi button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.sobremi button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1CB698;
+    z-index: -1;
+    transition: 1s;
+}
+.sobremi button:hover .overlay{
+    width: 100%;
+}
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+}
+
+
